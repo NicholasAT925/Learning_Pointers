@@ -30,13 +30,17 @@ int main(){
     /* Benifits of using pointer instead of arrays */
     copyString(String1, String2);
     printf("\n\nThe text in String2 = %s\n", String2);
-    
+
     return 0;
 }
 
+/* Function Details */
 void copyString(char *from, char *to){
-    while ( *from){
-        *to++ = *from++;
+/*  This Functions demostaits how little code needs to be writen vs calling
+    up the array through variables normally
+*/
+    while ( *from){ // Will return false when reaches the end of the string as there iS A '\0' AT THE END
+        *to++ = *from++; // return the variable before incrementing
     }
     *to = '\0';
 }
